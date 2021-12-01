@@ -1,0 +1,8 @@
+prefix=/home/philipp/hamster_simulation/devel
+
+Name: hupster_wandering
+Description: Description of hupster_wandering
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

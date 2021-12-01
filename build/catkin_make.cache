@@ -1,0 +1,2 @@
+hamster_simulation/gazebo_ackermann_drive_plugin:hamster_simulation/hamster_teleop:hamster_simulation/hamster_vehicle:hamster_simulation/hamster_vehicle_description:hamster_simulation/hamster_vehicle_gazebo:hamster_simulation/hupster_wandering
+-DCATKIN_DEVEL_PREFIX=/home/philipp/hamster_simulation/devel -DCMAKE_INSTALL_PREFIX=/home/philipp/hamster_simulation/install -G Unix Makefiles
