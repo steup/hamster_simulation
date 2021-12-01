@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "hamster_teleop"
-PROJECT_SPACE_DIR = "/home/philipp/hamster_simulation/install"
+PROJECT_SPACE_DIR = "/home/philipp/Development/hamster_simulation/install"
 PROJECT_VERSION = "0.0.0"

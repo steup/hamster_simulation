@@ -67,14 +67,14 @@ set(hamster_vehicle_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(hamster_vehicle_description_SOURCE_PREFIX /home/philipp/hamster_simulation/src/hamster_simulation/hamster_vehicle_description)
-  set(hamster_vehicle_description_DEVEL_PREFIX /home/philipp/hamster_simulation/devel)
+  set(hamster_vehicle_description_SOURCE_PREFIX /home/philipp/Development/hamster_simulation/src/hamster_simulation/hamster_vehicle_description)
+  set(hamster_vehicle_description_DEVEL_PREFIX /home/philipp/Development/hamster_simulation/devel)
   set(hamster_vehicle_description_INSTALL_PREFIX "")
   set(hamster_vehicle_description_PREFIX ${hamster_vehicle_description_DEVEL_PREFIX})
 else()
   set(hamster_vehicle_description_SOURCE_PREFIX "")
   set(hamster_vehicle_description_DEVEL_PREFIX "")
-  set(hamster_vehicle_description_INSTALL_PREFIX /home/philipp/hamster_simulation/install)
+  set(hamster_vehicle_description_INSTALL_PREFIX /home/philipp/Development/hamster_simulation/install)
   set(hamster_vehicle_description_PREFIX ${hamster_vehicle_description_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/philipp/hamster_simulation/install/lib;/home/philipp/hamster_simulation/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/philipp/Development/hamster_simulation/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

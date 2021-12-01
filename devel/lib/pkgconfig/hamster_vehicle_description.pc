@@ -1,4 +1,4 @@
-prefix=/home/philipp/hamster_simulation/devel
+prefix=/home/philipp/Development/hamster_simulation/devel
 
 Name: hamster_vehicle_description
 Description: Description of hamster_vehicle_description

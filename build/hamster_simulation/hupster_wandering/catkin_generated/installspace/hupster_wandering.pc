@@ -1,4 +1,4 @@
-prefix=/home/philipp/hamster_simulation/install
+prefix=/home/philipp/Development/hamster_simulation/install
 
 Name: hupster_wandering
 Description: Description of hupster_wandering

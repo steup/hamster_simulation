@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "hamster_vehicle_gazebo"
-PROJECT_SPACE_DIR = "/home/philipp/hamster_simulation/devel"
+PROJECT_SPACE_DIR = "/home/philipp/Development/hamster_simulation/devel"
 PROJECT_VERSION = "0.0.0"

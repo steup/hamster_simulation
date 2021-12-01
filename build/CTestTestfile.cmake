@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/philipp/hamster_simulation/src
-# Build directory: /home/philipp/hamster_simulation/build
+# Source directory: /home/philipp/Development/hamster_simulation/src
+# Build directory: /home/philipp/Development/hamster_simulation/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

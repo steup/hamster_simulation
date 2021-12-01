@@ -67,14 +67,14 @@ set(hupster_wandering_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(hupster_wandering_SOURCE_PREFIX /home/philipp/hamster_simulation/src/hamster_simulation/hupster_wandering)
-  set(hupster_wandering_DEVEL_PREFIX /home/philipp/hamster_simulation/devel)
+  set(hupster_wandering_SOURCE_PREFIX /home/philipp/Development/hamster_simulation/src/hamster_simulation/hupster_wandering)
+  set(hupster_wandering_DEVEL_PREFIX /home/philipp/Development/hamster_simulation/devel)
   set(hupster_wandering_INSTALL_PREFIX "")
   set(hupster_wandering_PREFIX ${hupster_wandering_DEVEL_PREFIX})
 else()
   set(hupster_wandering_SOURCE_PREFIX "")
   set(hupster_wandering_DEVEL_PREFIX "")
-  set(hupster_wandering_INSTALL_PREFIX /home/philipp/hamster_simulation/install)
+  set(hupster_wandering_INSTALL_PREFIX /home/philipp/Development/hamster_simulation/install)
   set(hupster_wandering_PREFIX ${hupster_wandering_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/philipp/hamster_simulation/install/lib;/home/philipp/hamster_simulation/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/philipp/Development/hamster_simulation/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

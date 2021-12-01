@@ -7,6 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/opt/ros/noetic/lib'
-export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig'
-export PWD='/home/philipp/hamster_simulation/build'
+export CMAKE_PREFIX_PATH="/home/philipp/Development/hamster_simulation/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/philipp/Development/hamster_simulation/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/philipp/Development/hamster_simulation/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/philipp/Development/hamster_simulation/src:$ROS_PACKAGE_PATH"

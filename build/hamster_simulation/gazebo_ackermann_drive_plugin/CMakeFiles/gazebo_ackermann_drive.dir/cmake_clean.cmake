@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/philipp/hamster_simulation/devel/lib/libgazebo_ackermann_drive.pdb"
-  "/home/philipp/hamster_simulation/devel/lib/libgazebo_ackermann_drive.so"
+  "/home/philipp/Development/hamster_simulation/devel/lib/libgazebo_ackermann_drive.pdb"
+  "/home/philipp/Development/hamster_simulation/devel/lib/libgazebo_ackermann_drive.so"
   "CMakeFiles/gazebo_ackermann_drive.dir/src/AckermannDrivePlugin.cpp.o"
 )
 
