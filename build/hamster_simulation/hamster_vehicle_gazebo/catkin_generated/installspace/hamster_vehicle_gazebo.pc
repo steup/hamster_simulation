@@ -1,8 +1,0 @@
-prefix=/home/philipp/Development/hamster_simulation/install
-
-Name: hamster_vehicle_gazebo
-Description: Description of hamster_vehicle_gazebo
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
