@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- /////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- To Add more agents, simply copy the group below and change the agent id -->
+  <!-- Robot with non-depth camera: set V6 in "robot_version" tag-->
+  <!-- Robot with depth camera: set V7 in "robot_version" tag-->
+  <!-- /////////////////////////////////////////////////////////////////////////////////// -->
+
+  <env name="GAZEBO_MODEL_PATH" value="$(find hamster_vehicle_gazebo):$(find hamster_vehicle_gazebo)/models"/>
+  <arg name="cmd_timeout" default="0.5"/>
+
+  <include file="$(find hamster_vehicle_gazebo)/launch/hamster_world.launch"/>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////////////// Agent1 ////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////////// -->
+  <group>
+    <arg name="agent" value="agent1"/>
+    <include file="$(find hamster_vehicle_gazebo)/launch/hamster_vehicle_spawner.launch">
+      <arg name="agent" value="$(arg agent)"/>
+      <arg name="cmd_timeout" value="$(arg cmd_timeout)"/>
+      <arg name="sx" value="1"/>
+      <arg name="sy" value="0"/>
+      <arg name="robot_version" default="V7"/>
+    </include>
+    <include file="$(find hupster_wandering)/launch/wandering.launch">
+      <arg name="robot_id" value="$(arg agent)"/>
+    </include>
+  </group>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////////////// Agent2 ////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- <group>
+    <arg name="agent" value="agent2"/>
+    <include file="$(find hamster_vehicle_gazebo)/launch/hamster_vehicle_spawner.launch">
+      <arg name="agent" value="$(arg agent)"/>
+      <arg name="cmd_timeout" value="$(arg cmd_timeout)"/>
+      <arg name="sx" value="0"/>
+      <arg name="sy" value="0"/>
+      <arg name="robot_version" default="V6"/>
+    </include>
+    <include file="$(find hupster_wandering)/launch/wandering.launch">
+      <arg name="robot_id" value="$(arg agent)"/>
+    </include>
+  </group> -->
+</launch>
