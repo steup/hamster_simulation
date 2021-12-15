@@ -239,7 +239,7 @@
           <baseline>0.2</baseline>
           <alwaysOn>true</alwaysOn>
           <updateRate>30.0</updateRate>
-          <cameraName></cameraName>
+          <cameraName>camera</cameraName>
           <imageTopicName>camera/color/image_raw</imageTopicName>
           <cameraInfoTopicName>camera/color/camera_info</cameraInfoTopicName>
           <depthImageTopicName>camera/depth/image_raw</depthImageTopicName>
