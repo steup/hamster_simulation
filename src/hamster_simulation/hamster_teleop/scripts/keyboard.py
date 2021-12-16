@@ -1,11 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import roslib
 import rospy
 from ackermann_msgs.msg import AckermannDriveStamped
 from std_msgs.msg import Float64
 import sys, select, termios, tty
-import thread
+import _thread
 from numpy import clip
 
 control_keys = {
@@ -80,7 +80,7 @@ class AckermannDriveKeyop:
         self.settings = termios.tcgetattr(sys.stdin)
         while 1:
             key = self.get_key()
-            if key in key_bindings.keys():
+            if key in list(key_bindings.keys()):
                 if key == control_keys['space']:
                     self.speed = 0.0
                 elif key == control_keys['tab']:
