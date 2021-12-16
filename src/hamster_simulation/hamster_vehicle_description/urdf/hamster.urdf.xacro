@@ -16,13 +16,14 @@
 
   <xacro:property name="version" value="$(arg robot_version)"/>
 
-  <link name="dummy"></link>
-
-  <link name="base_link">
+  <link name="dummy">
     <inertial>
       <mass value="3.0" />
       <inertia ixx="0.025" iyy="0.025" izz="5e-3" ixy="0" iyz="0" ixz="0"/>
     </inertial>
+  </link>
+
+  <link name="base_link">
     <visual>
       <geometry>
         <mesh filename="package://hamster_vehicle_description/meshes/shell.dae" />
@@ -36,8 +37,8 @@
   </link>
 
   <joint name="dummy_joint" type="fixed">
-     <parent link="dummy"/>
-     <child link="base_link"/>
+     <parent link="base_link"/>
+     <child link="dummy"/>
    </joint>
 
   <link name="imu_link">
