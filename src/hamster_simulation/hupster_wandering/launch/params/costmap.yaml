@@ -6,8 +6,8 @@ publish_frequency: 30.0
 #set if you want the voxel map published
 publish_voxel_map: false
 
-#set to true if you want to initialize the costmap from a static map
-static_map: false
+#set to true if you want to initialize the costmap from a static map -> this parameter is deprecated!
+#static_map: false
 
 rolling_window: true
 width: 5.0
@@ -26,7 +26,24 @@ max_obstacle_height: 0.5
 footprint_padding: 0.01
 inflation_radius: 0.5
 observation_sources: rplidar realsense
-rplidar: {topic: "scan", data_type: LaserScan, expected_update_rate: 0.2,
-  observation_persistence: 0.0, marking: true, clearing: true, max_obstacle_height: 0.5, min_obstacle_height: 0.02, inf_is_valid: true}
-realsense: {topic: "camera/depth/points", data_type: PointCloud2, expected_update_rate: 0.0,
-  observation_persistence: 0.0, marking: true, clearing: true, max_obstacle_height: 0.5, min_obstacle_height: 0.1, inf_is_valid: true}
+rplidar: {
+  topic: "scan",
+  data_type: LaserScan,
+  expected_update_rate: 0.5,
+  observation_persistence: 0.0,
+  marking: true,
+  clearing: true,
+  max_obstacle_height: 0.5,
+  min_obstacle_height: 0.02,
+  inf_is_valid: true
+  }
+realsense: {
+  topic: "camera/depth/points",
+  data_type: PointCloud2,
+  expected_update_rate: 0.0,
+  observation_persistence: 0.0,
+  marking: true,
+  clearing: true,
+  max_obstacle_height: 0.5,
+  min_obstacle_height: 0.1
+  }
