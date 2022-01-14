@@ -182,7 +182,7 @@
   </gazebo>
 
   <gazebo reference="lidar_link">
-    <sensor type="gpu_ray" name="head_hokuyo_sensor">
+    <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
       <update_rate>10</update_rate>
@@ -206,7 +206,7 @@
           <stddev>0.01</stddev>
         </noise>
       </ray>
-      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_gpu_laser.so">
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
         <topicName>scan</topicName>
         <frameName>$(arg agent)/lidar_link</frameName>
       </plugin>
@@ -235,11 +235,11 @@
           <alwaysOn>true</alwaysOn>
           <updateRate>30.0</updateRate>
           <cameraName>camera</cameraName>
-          <imageTopicName>camera/color/image_raw</imageTopicName>
-          <cameraInfoTopicName>camera/color/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>camera/depth/image_raw</depthImageTopicName>
-          <depthImageInfoTopicName>camera/depth/camera_info</depthImageInfoTopicName>
-          <pointCloudTopicName>camera/depth/points</pointCloudTopicName>
+          <imageTopicName>color/image_raw</imageTopicName>
+          <cameraInfoTopicName>color/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>depth/image_raw</depthImageTopicName>
+          <depthImageInfoTopicName>depth/camera_info</depthImageInfoTopicName>
+          <pointCloudTopicName>depth/points</pointCloudTopicName>
           <frameName>camera_optical_frame_link</frameName>
           <pointCloudCutoff>0.5</pointCloudCutoff>
           <pointCloudCutoffMax>5.0</pointCloudCutoffMax>
