@@ -37,7 +37,7 @@ For more information see:
     - Lidar: _/agent1/scan_ : _LaserScan_
 - There is also a rviz config file at _rviz/rviz_config_all_sensors.rviz_ which configures rviz to visualize all sensor inputs. It can be opened via _File_ -> _Open config_ in rviz
 
-### Known Bugs
+### Known bugs
 - The costmap is not being built using the sensor inputs - the reason couldn't be found.
 - The path planning does not work because of the costmap not having any obstacles. The path planned is always straight ahead.
 - The hupster wandering does not work because of the useless path planning. The Hamster robot will drive forward until it hits an obstacle which stops him.
