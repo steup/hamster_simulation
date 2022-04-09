@@ -26,8 +26,7 @@ For more information see:
 2. Launch one of the available simulations
 - Hamster without a depth camera: `roslaunch hamster_vehicle_gazebo hamster_V6_spawner.launch` (Hamster without depth camera)
 - Hamster with a depth camera: `roslaunch hamster_vehicle_gazebo hamster_V7_spawner.launch` 
-- Two hamster robots: agent1 is a hamster V6, agent2 is a hamster V7
-- `roslaunch hamster_vehicle_gazebo hamster_multi_vehicle.launch`
+- Two hamster robots: agent1 is a hamster V6, agent2 is a hamster V7: `roslaunch hamster_vehicle_gazebo hamster_multi_vehicle.launch`
 
 ### Visualizing sensor inputs using rviz
 - Launch rviz using the command `rviz`
