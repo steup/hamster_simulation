@@ -24,17 +24,18 @@ For more information see:
     - `source /opt/ros/noetic/setup.bash`
     - `source devel/setup.bash`
 2. Launch one of the available simulations
-- Hamster without a depth camera: `roslaunch hamster_vehicle_gazebo hamster_V6_spawner.launch` (Hamster without depth camera)
+- Hamster without a depth camera: `roslaunch hamster_vehicle_gazebo hamster_V6_spawner.launch`
 - Hamster with a depth camera: `roslaunch hamster_vehicle_gazebo hamster_V7_spawner.launch` 
 - Two hamster robots: agent1 is a hamster V6, agent2 is a hamster V7: `roslaunch hamster_vehicle_gazebo hamster_multi_vehicle.launch`
 
 ### Visualizing sensor inputs using rviz
+- NOTE: Hamster V6 does not have a depth camera!
 - Launch rviz using the command `rviz`
 - Add the according topics ro rviz using _Add_ -> _Add topic_
     - Camera image: _/agent1/camera/color/image_raw_ : _Image_
     - Camera depth image: _/agent1/camera/depth/image_raw_ : _Image_
     - Lidar: _/agent1/scan_ : _LaserScan_
-- There is also a rviz config file at _rviz/rviz_config_all_sensors.rviz_ which configures rviz to visualize all sensor inputs. It can be opened via _File_ -> _Open config_ in rviz
+- There are also two config files for each hamster version to visualize all sensor inputs at _rviz/_. They can be opened via _File_ -> _Open config_ in rviz.
 
 ### Known bugs
 - The costmap is not being built using the sensor inputs - the reason couldn't be found.
